@@ -3,8 +3,7 @@ const horas = document.getElementById('horas')
 const minutos = document.getElementById('minutos')
 const segundos = document.getElementById('segundos')
 
-//funcao para pegar a hora, minutos e segundos em tempo real
-const relogio = setInterval(function time() {
+function time() {
     let dateToday = new Date()
     let hr = dateToday.getHours()
     let min = dateToday.getMinutes()
@@ -20,5 +19,8 @@ const relogio = setInterval(function time() {
     horas.textContent = hr;
     minutos.textContent = min;
     segundos.textContent = sec;
+}
 
-})
+//funcao para pegar a hora, minutos e segundos em tempo real
+setInterval(time, 5000) // a função setinterval é uma função do proprio javascript que recebe dois argumentos, o primeiro argumento é a função que ela vai executar dentro do intervalo de tempo passado em milisegundos no segundo argumento.
+
